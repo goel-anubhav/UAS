@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+
+      <!-- contact form internal css -->
+      <style>
+       
+         * {
+             box-sizing: border-box;
+         }
+         
+         body {
+             background: #92bde7;
+             color: #485e74;
+             line-height: 1.6;
+             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+             padding: 1em;
+         }
+         
+         .container {
+             max-width: 960px;
+             margin-left: auto;
+             margin-right: auto;
+             padding: 1em;
+         }
+         
+         ul {
+             list-style: none;
+             padding: 0;
+         }
+         
+         .maint {
+             text-align: center;
+            color: white;
+         }
+         .section {
+             box-shadow: 0 0 20px 0 rgba(72, 94, 116, 0.7);
+         }
+         
+         .section > * {
+             padding: 1em;
+         }
+         
+         .brandname {
+             background: #c9e6ff;
+         }
+         
+         .brandname h3, .brandname ul {
+             text-align: center;
+             margin: 0 0 1rem 0;
+         }
+         
+         .contact {
+             background: #f9feff;
+         }
+         
+         .contact form {
+             display: grid;
+             grid-template-columns: 1fr 1fr;
+             grid-gap: 20px;
+         }
+         
+         .contact form label {
+             display: block;
+         }
+         
+         .contact form p {
+             margin: 0;
+         }
+         
+         .contact form .full {
+             grid-column: 1 / 3;
+         }
+         
+         .contact form button, .contact form input, .contact form textarea {
+             width: 100%;
+             padding: 1em;
+             border: 1px solid #c9e6ff;
+         }
+         
+         .contact form button {
+             background: #c9e6ff;
+             border: 0;
+             text-transform: uppercase;
+         }
+         
+         .contact form button:hover, .contact form button:focus {
+             background: #92bde7;
+             color: #fff;
+             outline: 0;
+             transition: background-color 0.5s ease-out;
+         }
+         
+         /* LARGE SCREENS */
+         @media(min-width:700px) {
+             .section {
+                 display: grid;
+                 grid-template-columns: 1fr 2fr;
+             }
+         
+             .section > * {
+                 padding: 2em;
+             }
+         
+             .compnay-info h3, .brandname ul, .maint {
+                 text-align: left;
+             }
+         }
+               </style>
+
+               <!-- End Of Internal css contact form -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+      <link rel="stylesheet" href="styles.css">
+      <!-- basic -->
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <!-- mobile metas -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+      <!-- site metas -->
+      <title>Unique AppSites</title>
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <!-- bootstrap css -->
+      <link rel="stylesheet" href="css/bootstrap.min.css">
+      <!-- style css -->
+      <link rel="stylesheet" href="css/style.css">
+      <!-- Responsive-->
+      <link rel="stylesheet" href="css/responsive.css">
+      <!-- fevicon -->
+      <link rel="icon" href="images/fevicon.png" type="image/gif" />
+      <!-- Tweaks for older IEs-->
+      <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+      <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+   </head>
+   <!-- body -->
+   <body class="main-layout inner_page">
+      <!-- loader  -->
+      <div class="loader_bg">
+         <div class="loader"><img src="images/loading.gif" alt="#"/></div>
+      </div>
+      <!-- end loader -->
+      <!-- header -->
+      <div class="header">
+         <div class="container-fluid">
+            <div class="row d_flex">
+               <div class=" col-md-2 col-sm-3 col logo_section">
+                  <div class="full">
+                     <div class="center-desk">
+                        <div class="logo">
+                           <a href="index.html"><img src="images/logo.png" alt="#" /></a>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-md-8 col-sm-12 text_align_right">
+                  <nav class="navigation navbar navbar-expand-md navbar-dark ">
+                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04"
+                        aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                     </button>
+                     <div class="collapse navbar-collapse" id="navbarsExample04">
+                        <ul class="navbar-nav mr-auto">
+                           <li class="nav-item active">
+                              <a class="nav-link" href="index.html">Home</a>
+                           </li>
+                           <li class="nav-item">
+                              <a class="nav-link" href="about.html">About</a>
+                           </li>
+                           <li class="nav-item">
+                              <a class="nav-link" href="skating.html">Notes</a>
+                           </li>
+                           <!-- <li class="nav-item">
+                              <a class="nav-link" href="shop.html">shop</a>
+                           </li> -->
+                           <li class="nav-item">
+                              <a class="nav-link" href="contact.html">Contact Us</a>
+                           </li>
+                        </ul>
+                     </div>
+                  </nav>
+               </div>
+               <!-- <div class="col-md-2">
+                  <ul class="email text_align_right">
+                     <li class="d_none"><a href="Javascript:void(0)"><i class="fa fa-user" aria-hidden="true"></i></a></li>
+                     <li class="d_none"> <a href="Javascript:void(0)"><i class="fa fa-search" style="cursor: pointer;" aria-hidden="true"></i></a> </li>
+                  </ul>
+               </div> -->
+            </div>
+         </div>
+      </div>
+      <!-- end header inner -->
+      <!-- contact -->
+      <!-- <div class="contact">
+         <div class="container">
+            <div class="row ">
+               <div class="col-md-12">
+                  <div class="titlepage text_align_center">
+                     <h2>Contact Us</h2>
+                  </div>
+               </div>
+               <div class="col-md-6">
+                  <form id="request" class="main_form">
+                     <div class="row">
+                        <div class="col-md-6 ">
+                           <input class="contactus" placeholder="Name*" type="type" name=" Name">
+                        </div>
+                        <div class="col-md-6">
+                           <input class="contactus" placeholder="Phone Number*" type="type" name="Phone Number">
+                        </div>
+                        <div class="col-md-12">
+                           <input class="contactus" placeholder="Email*" type="type" name="Email">
+                        </div>
+                        <div class="col-md-12 select-outline">
+                           <select class="custom-select ">
+                              <option selected>Select Subject*</option>
+                              <option value="1">a</option>
+                              <option value="2">b</option>
+                              <option value="3">c</option>
+                           </select>
+                        </div>
+                        <div class="col-md-12">
+                           <textarea class="textarea" placeholder="Message" type="type" Message="Name"></textarea>
+                        </div>
+                        <div class="col-md-12">
+                           <button class="send_btn">Send</button>
+                        </div>
+                     </div>
+                  </form>
+               </div>
+               <div class="col-md-6">
+                  <div class="map_main">
+                     <div class="map-responsive">
+                        <iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA0s1a7phLN0iaD6-UE7m4qP-z21pH0eSc&amp;q=Eiffel+Tower+Paris+France" width="600" height="450" frameborder="0" style="border:0; width: 100%;" allowfullscreen=""></iframe>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div> -->
+      <!-- contact -->
+      <!--  footer -->
+      <!-- <footer>
+         <div class="footer">
+            <div class="container">
+               <div class="row">
+                  <div class="col-md-4 ">
+                     <div class="infoma">
+                        <h3>Contact Us</h3>
+                        <ul class="conta">
+                           <li><i class="fa fa-map-marker" aria-hidden="true"></i>Locations
+                           </li>
+                           <li><i class="fa fa-phone" aria-hidden="true"></i>Call +01 1234567890</li>
+                           <li> <i class="fa fa-envelope" aria-hidden="true"></i><a href="Javascript:void(0)"> demo@gmail.com</a></li>
+                        </ul>
+                     </div>
+                  </div> -->
+                  <!-- <div class="col-md-8">
+                     <div class="row border_left">
+                        <div class="col-md-12">
+                           <div class="infoma">
+                              <h3>Newsletter</h3>
+                              <form class="form_subscri">
+                                 <div class="row">
+                                    <div class="col-md-12">
+                                    </div>
+                                    <div class="col-md-4">
+                                       <input class="newsl" placeholder="Enter your email" type="text" name="Enter your email">
+                                    </div>
+                                    <div class="col-md-4">
+                                       <input class="newsl" placeholder="Enter your email" type="text" name="Enter your email">
+                                    </div>
+                                    <div class="col-md-4">
+                                       <button class="subsci_btn">subscribe</button>
+                                    </div>
+                                 </div> -->
+                              <!-- </form>
+                           </div>
+                        </div>
+                        <div class="col-md-9">
+                           <div class="infoma">
+                              <h3>Useful Link</h3>
+                              <ul class="fullink">
+                                 <li><a href="index.html">Home</a></li>
+                                 <li><a href="about.html">About</a></li>
+                                 <li><a href="skating.html">Skating</a></li>
+                                 <li><a href="shop.html">Shop</a></li>
+                                 <li><a href="contact.html">Contact Us</a></li>
+                              </ul>
+                           </div>
+                        </div>
+                        <div class="col-md-3">
+                           <div class="infoma text_align_left">
+                              <ul class="social_icon">
+                                 <li><a href="Javascript:void(0)"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                 <li><a href="Javascript:void(0)"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                                 <li><a href="Javascript:void(0)"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a></li>
+                                 <li><a href="Javascript:void(0)"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                              </ul>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="copyright">
+               <div class="container">
+                  <div class="row">
+                     <div class="col-md-12">
+                        <p>© 2020 All Rights Reserved. Design by <a href="https://html.design/"> Free html Templates</a></p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </footer> -->
+      
+      <div class="container">
+    <title>Unqiue AppSites Contact Form</title>
+ 
+<body>
+    <div class="container">
+        <h1 class="maint">Animated Contact Form</h1>
+        <div class="section animated bounceInLeft">
+            <div class="brandname">
+                <h3 href="www.youtube.com/Uniqueappsites">Unique AppSites</h3>
+                <ul>
+                    <li>Telegram: @anubhavgoel01</li>
+                    <li>UniqueAppSites@gmail.com</li>
+                    <li>UniqueAppSites.com</li>
+                </ul>
+            </div>
+            <div class="contact">
+             
+                <form action="#">
+                    <p>
+                        <label for="#">Name</label>
+                        <input type="text" name="name">
+                    </p>
+                    <p>
+                        <label for="#">Course & Year</label>
+                        <input type="text" name="company">
+                    </p>
+                    <p>
+                        <label for="#">Email Address</label>
+                        <input type="email" name="email">
+                    </p>
+                    <p>
+                        <label for="#">Phone Number</label>
+                        <input type="text" name="phone">
+                    </p>
+                    <p class="full">
+                        <label for="#">Message</label>
+                        <textarea name="message" cols="30" rows="5"></textarea>
+                    </p>
+                    <p class="full">
+                        <button>Submit</button>
+                    </p>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+      </div>
+
+      <style>
+         @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+
+         * {
+            margin-top: 25px;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+         }
+
+         body-footer {margin-top: 25px;
+            display: flex;
+            background: #333;
+            justify-content: flex-end;
+            align-items: flex-end;
+            min-height: 100vh;
+         }
+
+         .footer {
+            margin-top: 50px;
+            position: relative;
+            width: 100%;
+            background: #3586ff;
+            min-height: 100px;
+            padding: 20px 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+         }
+
+         .social-icon,
+         .menu-footer {
+            margin-top: 25px;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 10px 0;
+            flex-wrap: wrap;
+         }
+
+         .social-icon__item,
+         .menu__item-footer {
+            list-style: none;
+         }
+
+         .social-icon__link {
+            font-size: 2rem;
+            color: #fff;
+            margin: 0 10px;
+            display: inline-block;
+            transition: 0.5s;
+         }
+
+         .social-icon__link:hover {
+            transform: translateY(-10px);
+         }
+
+         .menu__link {
+            font-size: 1.2rem;
+            color: #fff;
+            margin: 0 10px;
+            display: inline-block;
+            transition: 0.5s;
+            text-decoration: none;
+            opacity: 0.75;
+            font-weight: 300;
+         }
+
+         .menu__link:hover {
+            opacity: 1;
+         }
+
+         .footer p {
+            margin-top: 25px;
+            color: #fff;
+            margin: 15px 0 10px 0;
+            font-size: 1rem;
+            font-weight: 300;
+         }
+
+         .wave-footer {
+            margin-top: 25px;
+            position: absolute;
+            top: -100px;
+            left: 0;
+            width: 100%;
+            height: 100px;
+            background: url("https://i.ibb.co/wQZVxxk/wave.png");
+            background-size: 1000px 100px;
+         }
+
+         .wave-footer#wave1 {
+            z-index: 1000;
+            opacity: 1;
+            bottom: 0;
+            animation: animateWaves 4s linear infinite;
+         }
+
+         .wave-footer#wave2 {
+            z-index: 999;
+            opacity: 0.5;
+            bottom: 10px;
+            animation: animate 4s linear infinite !important;
+         }
+
+         .wave-footer#wave3 {
+            z-index: 1000;
+            opacity: 0.2;
+            bottom: 15px;
+            animation: animateWaves 3s linear infinite;
+         }
+
+         .wave-footer#wave4 {
+            z-index: 999;
+            opacity: 0.7;
+            bottom: 20px;
+            animation: animate 3s linear infinite;
+         }
+
+         @keyframes animateWaves {
+            0% {
+               background-position-x: 1000px;
+            }
+
+            100% {
+               background-positon-x: 0px;
+            }
+         }
+
+         @keyframes animate {
+            0% {
+               background-position-x: -1000px;
+            }
+
+            100% {
+               background-positon-x: 0px;
+            }
+         }
+      </style>
+      <footer>
+         <html>
+
+         <body>
+            <footer class="footer">
+              <div class="waves-footer" >
+                  <div class="wave-footer" id="wave1"></div>
+                  <div class="wave-footer" id="wave2"></div>
+                  <div class="wave-footer" id="wave3"></div>
+                  <div class="wave-footer" id="wave4"></div>
+               </div>
+               <ul class="social-icon">
+                  <li class="social-icon__item"><a class="social-icon__link" href="#">
+                        <ion-icon name="logo-facebook"></ion-icon>
+                     </a></li>
+                  <li class="social-icon__item"><a class="social-icon__link" href="#">
+                        <ion-icon name="logo-twitter"></ion-icon>
+                     </a></li>
+                  <li class="social-icon__item"><a class="social-icon__link" href="#">
+                        <ion-icon name="logo-linkedin"></ion-icon>
+                     </a></li>
+                  <li class="social-icon__item"><a class="social-icon__link" href="#">
+                        <ion-icon name="logo-instagram"></ion-icon>
+                     </a></li>
+               </ul>
+               <ul class="menu-footer">
+                  <li class="menu__item-footer"><a class="menu__link" href="#">Home</a></li>
+                  <li class="menu__item-footer"><a class="menu__link" href="#">About</a></li>
+                  <li class="menu__item-footer"><a class="menu__link" href="#">Services</a></li>
+                  <li class="menu__item-footer"><a class="menu__link" href="#">Team</a></li>
+                  <li class="menu__item-footer"><a class="menu__link" href="#">Contact</a></li>
+
+               </ul>
+               <p>&copy;2023 Unique AppSites | All Rights Reserved</p>
+            </div>
+            </footer>
+
+
+      <!-- end footer -->
+      <!-- Javascript files-->
+      <script src="js/jquery.min.js"></script>
+      <script src="js/bootstrap.bundle.min.js"></script>
+      <script src="js/jquery-3.0.0.min.js"></script>
+      <!-- sidebar -->
+      <script src="js/custom.js"></script>
+      <script>
+         AOS.init();
+      </script>
+   </body>
+</html>
